@@ -1,5 +1,6 @@
-package com.example.CacheImpl.entity;
+package com.example.CacheImpl.controller;
 
+import com.example.CacheImpl.entity.Book;
 import com.example.CacheImpl.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

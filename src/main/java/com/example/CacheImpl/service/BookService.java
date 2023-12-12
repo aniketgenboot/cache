@@ -18,7 +18,7 @@ public class BookService {
         return bookRepository.findAll();
     }
     @Cacheable(value = "application",key="#id")
-    public Book findById(Long id) {
+    public Book findById(Integer id) {
         System.out.print("find by repository");
         return bookRepository.findById(id).orElse(null);
 
@@ -30,7 +30,7 @@ public class BookService {
 
 
     @CacheEvict(value = "application",key = "#id")
-    public void clearDataFromCache(Long id) {
+    public void clearDataFromCache(Integer id) {
         System.out.print("cache cleared"+id);
     }
 

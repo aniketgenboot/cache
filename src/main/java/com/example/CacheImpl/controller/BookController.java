@@ -21,7 +21,7 @@ public class BookController {
     }
 
     @GetMapping("/book/find/{id}")
-    public Book findById(@PathVariable Long id) {
+    public Book findById(@PathVariable Integer id) {
         return service.findById(id);
     }
 
@@ -32,7 +32,7 @@ public class BookController {
     }
 
     @GetMapping("/book/clearDataFromCache/{id}")
-    public String clearDataFromCache(@PathVariable Long id) {
+    public String clearDataFromCache(@PathVariable Integer id) {
         service.clearDataFromCache(id);
         return id+" cleared from cache";
     }

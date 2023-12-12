@@ -18,22 +18,7 @@ public class CaffeineCacheConfig {
     }
     Caffeine<Object,Object> caffeineCacheBuilder(){
         return Caffeine.newBuilder().initialCapacity(100)
-                .maximumSize(500).expireAfterAccess(10, TimeUnit.MILLISECONDS)
+                .maximumSize(500).expireAfterAccess(10000, TimeUnit.MILLISECONDS)
                 .recordStats();
     }
-//    @Autowired
-//    CacheManager cacheManager;
-//    @Autowired
-//    BookService bookService;
-//
-//    @PostConstruct
-//    public void preload(){
-//        Cache cache= cacheManager.getCache("application");
-//        System.out.print("initialising cache");
-//        List<Book> getAllBooks=bookService.getAll();
-//        for(Book book:getAllBooks){
-//            cache.put(book.getId(),book);
-//        }
-//    }
-//
 }
